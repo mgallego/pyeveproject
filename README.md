@@ -13,6 +13,8 @@ A web application for personal use to manage my EVE Online characters and their 
 
 I'm making the jump from PHP to Python and I want to refresh my knowledge and update myself by applying modern tools and technologies. To do this, I'm building a real, open source project that serves as a portfolio.
 
+You can learn more about the motivation behind the project in this [post](https://moidev.com/en/posts/new-python-project/).
+
 ## What it is
 
 EVE Online is a game that, to get the most out of it, practically forces you to keep a spreadsheet open next to you. Since I don't like Excel and EVE has a very well documented and complete REST API, I'm going to build this web application.
