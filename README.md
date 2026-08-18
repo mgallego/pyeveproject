@@ -1,6 +1,7 @@
 # PyEveProject
 
 [![CI](https://github.com/mgallego/pyeveproject/actions/workflows/ci.yaml/badge.svg)](https://github.com/mgallego/pyeveproject/actions/workflows/ci.yaml)
+[![Tasks](https://img.shields.io/badge/Tasks-%F0%9F%93%8B-blue)](https://github.com/mgallego/pyeveproject/issues)
 
 > Temporary name. I haven't decided what to call this project yet, so for now it's known as **PyEveProject**.
 
@@ -29,6 +30,10 @@ It will be an open source project in case anyone finds it useful, although it's 
 ## Status
 
 Early stage project. It will be built incrementally in my spare time.
+
+### Todo list
+
+- [x] Create the CI pipeline and run ruff (lint and format)
 
 ## License
 
