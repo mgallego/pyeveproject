@@ -1,5 +1,7 @@
 # PyEveProject
 
+[![CI](https://github.com/mgallego/pyeveproject/actions/workflows/ci.yaml/badge.svg)](https://github.com/mgallego/pyeveproject/actions/workflows/ci.yaml)
+
 > Temporary name. I haven't decided what to call this project yet, so for now it's known as **PyEveProject**.
 
 > **Warning about AI-generated code:** only the frontend is developed with AI (agents, sub-agents, skills, etc.). Everything else is written by hand. I use AI for the frontend because it's not my strong point and I also want to show that I know how to use it.
