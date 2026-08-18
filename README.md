@@ -27,6 +27,14 @@ It will be an open source project in case anyone finds it useful, although it's 
 - The **frontend** will be developed with **AI** (agents, sub-agents, skills, etc.), as it's not my strong point and I also want to show that I know how to use it.
 - **Everything else** will be written by hand, reading the documentation.
 
+## Development
+
+Run the local development server:
+
+```bash
+uv run fastapi dev src/pyeveproject/main.py
+```
+
 ## Status
 
 Early stage project. It will be built incrementally in my spare time.
