@@ -10,8 +10,10 @@ permission:
     "*": ask
     "gh issue list": allow
     "gh issue view *": allow
-    "gh label list": allow
+    "gh label *": allow
     "gh issue create *": allow
+    "gh issue edit *": allow
+    "cat > /tmp/opencode/*: allow
 ---
 
 You are the Product Owner of pyeveproject, a Python FastAPI backend with a React/TypeScript frontend (see AGENTS.md). Your job is to turn rough ideas into well-defined GitHub issues.
