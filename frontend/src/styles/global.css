@@ -1,0 +1,43 @@
+:root {
+  --bg-deep: #05070d;
+  --bg-navy: #0a1020;
+  --bg-panel: #0d1526;
+  --gold: #d9a441;
+  --gold-bright: #f0c566;
+  --gold-dim: #8a6a2f;
+  --starlight: #7fb4d4;
+  --starlight-dim: #4a7090;
+  --text-primary: #e8eef6;
+  --text-secondary: #a7b4c6;
+  --hairline: rgba(217, 164, 65, 0.35);
+  --hairline-soft: rgba(127, 180, 212, 0.25);
+
+  --font-display: "Bank Gothic", "Arial Narrow", "Helvetica Neue", Arial,
+    sans-serif;
+  --font-body: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+
+  --radius-panel: 2px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  background-color: var(--bg-deep);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
