@@ -27,6 +27,7 @@ It will be an open source project in case anyone finds it useful, although it's 
 - Deploy it on **one or more servers**, with **CI/CD**, **monitoring** and **alerting**.
 - Build it step by step, in my spare time, without rushing.
 - The **frontend** will be developed with **AI** (agents, sub-agents, skills, etc.), as it's not my strong point and I also want to show that I know how to use it.
+- I'm using [Spec Kit](https://github.com/github/spec-kit) to drive frontend development.
 - **Everything else** will be written by hand, reading the documentation.
 
 ## Development
