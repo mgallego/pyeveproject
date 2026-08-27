@@ -1,0 +1,105 @@
+.atmosphere {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      70% 60% at 50% 35%,
+      rgba(13, 21, 38, 0.9),
+      var(--bg-deep) 75%
+    );
+}
+
+.atmosphere__stars {
+  position: absolute;
+  inset: -2%;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 33% 64%, #cdd9ea, transparent 60%),
+    radial-gradient(1.5px 1.5px at 58% 22%, #f0c566, transparent 62%),
+    radial-gradient(1px 1px at 71% 48%, #fff, transparent 60%),
+    radial-gradient(1.5px 1.5px at 42% 82%, #7fb4d4, transparent 62%),
+    radial-gradient(1px 1px at 86% 76%, #fff, transparent 60%),
+    radial-gradient(1px 1px at 24% 90%, #cdd9ea, transparent 60%),
+    radial-gradient(1.5px 1.5px at 92% 12%, #fff, transparent 62%),
+    radial-gradient(1px 1px at 66% 92%, #d9a441, transparent 60%);
+  background-size: 240px 240px;
+  animation: twinkle 6s ease-in-out infinite;
+  opacity: 0.7;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+.atmosphere__panel {
+  position: absolute;
+  border: 1px solid var(--hairline-soft);
+  background: linear-gradient(
+    180deg,
+    rgba(13, 21, 38, 0.35),
+    rgba(5, 7, 13, 0.15)
+  );
+  clip-path: polygon(0 14px, 14px 0, 100% 0, 100% calc(100% - 14px), calc(100% - 14px) 100%, 0 100%);
+}
+
+.atmosphere__panel--tl {
+  top: clamp(1.25rem, 5vw, 4rem);
+  left: clamp(1.25rem, 5vw, 4rem);
+  width: clamp(6rem, 16vw, 13rem);
+  height: clamp(3rem, 7vw, 5rem);
+}
+
+.atmosphere__panel--br {
+  bottom: clamp(1.25rem, 5vw, 4rem);
+  right: clamp(1.25rem, 5vw, 4rem);
+  width: clamp(6rem, 16vw, 13rem);
+  height: clamp(3rem, 7vw, 5rem);
+}
+
+.atmosphere__corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--gold);
+  opacity: 0.7;
+}
+
+.atmosphere__corner--tl {
+  top: clamp(1rem, 4vw, 3rem);
+  left: clamp(1rem, 4vw, 3rem);
+  border-right: none;
+  border-bottom: none;
+}
+
+.atmosphere__corner--br {
+  bottom: clamp(1rem, 4vw, 3rem);
+  right: clamp(1rem, 4vw, 3rem);
+  border-left: none;
+  border-top: none;
+}
+
+.atmosphere__scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.012) 0 1px,
+    transparent 1px 3px
+  );
+  mix-blend-mode: overlay;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .atmosphere__stars {
+    animation: none;
+  }
+}
