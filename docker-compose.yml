@@ -1,14 +1,16 @@
 services:
   backend:
     image: ghcr.io/astral-sh/uv:python3.14-bookworm-slim
-    volumes: [.:/app]
+    volumes: [./api:/app]
+    user: "${UID}:${GID}"
     working_dir: /app
-    command: uv run uvicorn pyeveproject.main:app --reload --host 0.0.0.0 --port 8083
+    command: uv run uvicorn main:app --reload --host 0.0.0.0 --port 8083
     ports: ["8083:8083"]
 
   frontend:
     image: node:24-alpine
     working_dir: /app/frontend
+    user: "${UID}:${GID}"
     volumes:
       - ./frontend:/app/frontend
       - frontend_node_modules:/app/frontend/node_modules

@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'api/**'
   workflow_dispatch:
 
 jobs:
@@ -21,7 +23,7 @@ jobs:
         uses: astral-sh/setup-uv@v10.0.1
 
       - name: Deploy to FastAPI Cloud
-        run: uv run fastapi deploy
+        run: uv run --directory api fastapi deploy
         env:
           FASTAPI_CLOUD_TOKEN: ${{ secrets.FASTAPI_CLOUD_TOKEN }}
           FASTAPI_CLOUD_APP_ID: ${{ secrets.FASTAPI_CLOUD_APP_ID }}
