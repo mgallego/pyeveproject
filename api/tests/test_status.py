@@ -104,7 +104,7 @@ async def test_get_system_status_survives_esi_failure(monkeypatch: MonkeyPatch) 
 
     result = await get_system_status()
 
-    assert result.api.status == HealthStatus.OK  # api sigue OK
+    assert result.api.status == HealthStatus.OK
     assert result.esi.status == HealthStatus.KO
     assert result.esi.detail == "network unreachable"
     assert isinstance(result.esi, EsiStatus)
