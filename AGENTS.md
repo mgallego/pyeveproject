@@ -18,6 +18,23 @@ AI agents are allowed to work **only** on the **frontend**: JavaScript (JS), sty
 - Actively recommend frontend approaches, patterns, and tools you think are a better fit for the task.
 - Explain your recommendations clearly so the user can decide.
 
+## Running frontend commands (Docker)
+
+- **Always** run frontend commands (`npm`, tests, typecheck, build, Vite) **inside the project's `frontend` container** — never directly on the host.
+- If the container is already running, run the command inside it:
+  ```sh
+  docker compose exec frontend npm run test:run
+  docker compose exec frontend npm run typecheck
+  docker compose exec frontend npm run build
+  ```
+- If the container is **not** running, start it first and then run the command inside it:
+  ```sh
+  docker compose up -d frontend
+  docker compose exec frontend <command>
+  ```
+- The `frontend` container boots `npm run dev -- --host 0.0.0.0` (served on port `5173`) and installs dependencies into a named volume (`frontend_node_modules`), so `node_modules` is managed by the container.
+- Do not run `npm install`, `npm run ...`, or any npm-related command directly on the host.
+
 ## Good practices
 
 - Use React best practices: functional components and hooks, small and focused components.

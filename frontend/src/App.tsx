@@ -1,7 +1,9 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import EveTitle from './components/EveTitle'
+import NotFound from './pages/NotFound'
 import './App.css'
 
-export default function App() {
+function Landing() {
   return (
     <>
       <div className="atmosphere" aria-hidden="true">
@@ -21,5 +23,22 @@ export default function App() {
         </div>
       </main>
     </>
+  )
+}
+
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   )
 }

@@ -35,8 +35,38 @@ It will be an open source project in case anyone finds it useful, although it's 
 Run the local development server:
 
 ```bash
-uv run fastapi dev src/pyeveproject/main.py
+uv run fastapi dev
 ```
+
+### Frontend (Docker)
+
+The frontend runs inside the project's `frontend` container (`node:24-alpine`), which serves the app with Vite on `http://localhost:5173`.
+
+Start the container:
+
+```bash
+docker compose up -d frontend
+```
+
+The container boots the Vite dev server automatically and installs dependencies into a named volume (`frontend_node_modules`).
+
+Useful commands — **always run inside the container**:
+
+```bash
+# Dev server (auto-started when the container boots); open http://localhost:5173
+docker compose exec frontend npm run dev
+
+# Run the test suite (Vitest + React Testing Library)
+docker compose exec frontend npm run test:run
+
+# TypeScript typecheck
+docker compose exec frontend npm run typecheck
+
+# Production build (output: ../api/static)
+docker compose exec frontend npm run build
+```
+
+> Note: `api/` is not mounted in the `frontend` container, so a build inside the container writes to `/app/api/static` (container-local), not to the host's `api/static`.
 
 ## Status
 
