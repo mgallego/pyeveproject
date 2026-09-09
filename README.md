@@ -42,10 +42,6 @@ uv run fastapi dev src/pyeveproject/main.py
 
 Early stage project. It will be built incrementally in my spare time.
 
-### Todo list
-
-- [x] Create the CI pipeline and run ruff (lint and format)
-
 ## License
 
 [GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html)
