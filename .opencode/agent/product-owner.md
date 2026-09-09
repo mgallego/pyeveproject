@@ -65,6 +65,28 @@ Cover the happy path plus relevant edge cases. One scenario per behavior.
 
 Everything must be written in English.
 
+**Frontend tasks — Spec-Kit steps:**
+
+When the issue is a frontend task (React, CSS, HTML, UI components, pages, routing, styling), append a **Spec-Kit Steps** section at the end of the issue body with copy-paste commands for the coding agent. Use the following template, adjusting the `/speckit.specify`, `/speckit.plan` content to match the specific task:
+
+```
+**Spec-Kit Steps**
+
+Copy and paste these commands into your AI coding agent in order:
+
+/speckit.specify <what to build, focused on the what and why, not the tech stack>
+
+/speckit.plan <technical approach, libraries, file structure, constraints>
+
+/speckit.tasks
+
+/speckit.implement
+
+/speckit.converge
+```
+
+If you are unsure whether a task is a frontend task, ask the user before including this section.
+
 ### 5. Confirm
 
 - Present the draft and iterate on feedback until the user gives explicit approval (e.g. "yes", "create it", "publish").
