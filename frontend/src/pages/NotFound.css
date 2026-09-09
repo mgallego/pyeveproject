@@ -1,0 +1,39 @@
+.not-found {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  gap: 0.75rem;
+  text-align: center;
+  padding: 2rem;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 60%, rgba(217, 164, 65, 0.06), transparent),
+    var(--bg-deep);
+}
+
+.not-found__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 0.95;
+  color: var(--gold-bright);
+  background: linear-gradient(
+    180deg,
+    var(--gold-bright) 0%,
+    var(--gold) 55%,
+    var(--gold-dim) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: clamp(1.8rem, 7vw, 4.5rem);
+  text-shadow: none;
+  filter: drop-shadow(0 0 14px rgba(217, 164, 65, 0.35));
+}
+
+.not-found__message {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: clamp(0.95rem, 2.5vw, 1.15rem);
+  letter-spacing: 0.02em;
+}
