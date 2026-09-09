@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import EveTitle from './components/EveTitle'
 import NotFound from './pages/NotFound'
+import StatusPage from './pages/StatusPage'
 import './App.css'
 
 function Landing() {
@@ -30,6 +31,7 @@ export function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<Landing />} />
+      <Route path="/status" element={<StatusPage />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
