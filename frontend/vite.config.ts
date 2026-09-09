@@ -7,6 +7,11 @@ export default defineConfig({
     outDir: '../api/static',
     emptyOutDir: true,
   },
+  server: {
+    proxy: {
+      '/api': 'http://backend:8083',
+    },
+  },
   test: {
     globals: true,
     environment: 'jsdom',
